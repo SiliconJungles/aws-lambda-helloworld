@@ -68,6 +68,13 @@ functions:
           path: /main
           method: get
 
+  secondary:
+    handler: handler.secondary
+    events:
+      - http:
+          path: /secondary
+          method: get
+
 plugins:
   - serverless-plugin-typescript
   - serverless-offline

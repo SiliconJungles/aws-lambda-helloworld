@@ -16,4 +16,15 @@ const main: Handler = (event: any, context: Context, callback: Callback) => {
 	callback(undefined, response)
 }
 
-export { main }
+const secondary: Handler = (event: any, context: Context, callback: Callback) => {
+	const response: HelloResponse = {
+			statusCode: 200,
+			body: JSON.stringify({
+					message: 'secondary'
+			})
+	}
+
+	callback(undefined, response)
+}
+
+export { main, secondary }

@@ -1,0 +1,34 @@
+function1:
+  handler: multi_handler.function1
+  events:
+    - http:
+        path: /function1
+        method: get
+
+function2:
+  handler: multi_handler.function2
+  events:
+    - http:
+        path: /function2
+        method: get  
+  
+function3:
+  handler: multi_handler.function3
+  events:
+    - http:
+        path: /function3
+        method: get
+
+function4:
+  handler: multi_handler.function4
+  events:
+    - http:
+        path: /function4
+        method: get 
+
+function5:
+  handler: multi_handler.function5
+  events:
+    - http:
+        path: /function5
+        method: get 

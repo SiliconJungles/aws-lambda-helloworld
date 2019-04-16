@@ -62,26 +62,29 @@ package:
   #   - src/grab_handler.ts
 
 functions:
-  main:
-    handler: handler.main
-    events:
-      - http:
-          path: /main
-          method: get
+  - main:
+      handler: handler.main
+      events:
+        - http:
+            path: /main
+            method: get
 
-  secondary:
-    handler: handler.secondary
-    events:
-      - http:
-          path: /secondary
-          method: get
+  - secondary:
+      handler: handler.secondary
+      events:
+        - http:
+            path: /secondary
+            method: get
 
-  checkPrice:
-    handler: grab_handler.checkPrice
-    events:
-      - http:
-          path: /check-price
-          method: get          
+  - checkPrice:
+      handler: grab_handler.checkPrice
+      events:
+        - http:
+            path: /check-price
+            method: get    
+
+  - ${file(./functions/multi_handler_functions.yml)}
+      
 
 plugins:
   - serverless-plugin-typescript

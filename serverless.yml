@@ -58,7 +58,8 @@ package:
   exclude:
     - node_modules/**/*
   include:
-    - handler.ts
+  #   - src/haandler.ts
+  #   - src/grab_handler.ts
 
 functions:
   main:
@@ -74,6 +75,13 @@ functions:
       - http:
           path: /secondary
           method: get
+
+  checkPrice:
+    handler: grab_handler.checkPrice
+    events:
+      - http:
+          path: /check-price
+          method: get          
 
 plugins:
   - serverless-plugin-typescript

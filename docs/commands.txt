@@ -1,0 +1,8 @@
+// Starts in local mode
+- serverless offline start
+
+// Deploys to AWS using provided credentials
+- serverless deploy
+
+// Compiles .ts to .js. Not required when running serverless as it will auto-compile. Also not required if watcher is on.
+- tsc compile 

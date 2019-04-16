@@ -1,0 +1,8 @@
+1) 
+- npm i serverless -g
+- npm i tsc -g
+- npm i tslint -g
+
+2) serverless config credentials --provider aws --key YOUR_ACCESS_KEY --secret YOUR_SECRET_KEY
+
+3) VSCode: Press Ctrl+Shift+B to open a list of tasks in VS Code and select tsc: watch - tsconfig.json.

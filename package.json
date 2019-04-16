@@ -1,0 +1,20 @@
+{
+  "name": "billcheap-prototype-lambda-v2",
+  "version": "1.0.0",
+  "description": "HelloWorld project for AWS Lambda with Typescript & Serverless",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jaslyn (Silicon Jungles)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.24",
+    "serverless-offline": "^4.9.4",
+    "serverless-plugin-typescript": "^1.1.7",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.3"
+  },
+  "dependencies": {}
+}

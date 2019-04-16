@@ -1,0 +1,29 @@
+## Deploying a TypeScript + Node AWS Lambda Function with Serverless
+
+https://blog.shovonhasan.com/deploying-a-typescript-node-aws-lambda-function-with-serverless/
+
+1) mkdir <project>
+
+2) 
+- npm i serverless -g
+- npm i tsc -g
+- npm i tslint -g
+
+3) cd <project>
+
+4) serverless create --template aws-nodejs
+
+5) serverless config credentials --provider aws --key YOUR_ACCESS_KEY --secret YOUR_SECRET_KEY
+
+6) npm init
+
+7) npm i serverless-offline serverless-plugin-typescript --save-dev
+
+8) Add these lines to serverless.yml
+    plugins:
+      - serverless-plugin-typescript
+      - serverless-offline
+
+9) tsc --init
+
+10) tslint --init

@@ -57,9 +57,6 @@ provider:
 package:
   exclude:
     - node_modules/**/*
-  include:
-  #   - src/haandler.ts
-  #   - src/grab_handler.ts
 
 functions:
   - main:

@@ -32,3 +32,17 @@ function5:
     - http:
         path: /function5
         method: get 
+
+getParams:
+  handler: multi_handler.getParams
+  events:
+    - http:
+        path: /get-params
+        method: get
+
+postParams:
+  handler: multi_handler.postParams
+  events:
+    - http:
+        path: /post-params
+        method: post

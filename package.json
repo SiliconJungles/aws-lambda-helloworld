@@ -4,7 +4,10 @@
   "description": "HelloWorld project for AWS Lambda with Typescript & Serverless",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"serve": "serverless offline start",
+		"tsc": "tsc",
+		"deploy": "serverless deploy"
   },
   "author": "Jaslyn (Silicon Jungles)",
   "license": "ISC",

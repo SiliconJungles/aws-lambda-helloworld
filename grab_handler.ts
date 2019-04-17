@@ -7,7 +7,7 @@ const checkPrice: Handler = (event: any, context: Context, callback: Callback) =
 				grab_price: '123'
 		})
 	}
-	callback(undefined, response)
+	callback(undefined, response))
 }
 
 export { checkPrice }

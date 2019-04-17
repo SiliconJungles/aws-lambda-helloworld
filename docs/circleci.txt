@@ -1,0 +1,2 @@
+obtain access tokens from AWS console and set here:
+- https://circleci.com/gh/SiliconJungles/aws-lambda-helloworld/edit#aws

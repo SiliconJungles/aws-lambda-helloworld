@@ -42,3 +42,12 @@ jobs:
       - run:
           name: Deploy to AWS
           command: serverless deploy
+
+workflows:
+  version: 2
+  test-build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master

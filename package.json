@@ -1,5 +1,5 @@
 {
-  "name": "billcheap-prototype-lambda-v2",
+  "name": "aws-lambda-helloworld",
   "version": "1.0.0",
   "description": "HelloWorld project for AWS Lambda with Typescript & Serverless",
   "main": "handler.js",

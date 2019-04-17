@@ -33,7 +33,7 @@ jobs:
 
       - run:
           name: Compile Typescript
-          command: tsc
+          command: npm run tsc
 
       # - run:
       #     name: Unit tests

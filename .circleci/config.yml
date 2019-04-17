@@ -14,15 +14,31 @@ jobs:
 
     steps:
       - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
       - run:
-          name: Install Node dependencies
-          command: npm install
+          name: Install Serverless CLI and dependencies
+          command: |
+            sudo npm i -g serverless
+            npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-
+
       - run:
           name: Compile Typescript
-          command: npm run tsc          
+          command: tsc
+
       # - run:
       #     name: Unit tests
       #     command: npm test
+
       - run:
           name: Deploy to AWS
-          command: npm run deploy
+          command: serverless deploy

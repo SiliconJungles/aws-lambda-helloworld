@@ -5,7 +5,7 @@ const checkPrice: Handler = async (event: any, context: Context, callback: Callb
 	const response: APIGatewayProxyResult = {
 		statusCode: 200,
 		body: JSON.stringify(
-				'yoyoyoo'
+				await all_prices()
 		)
 	}
 	callback(undefined, response)

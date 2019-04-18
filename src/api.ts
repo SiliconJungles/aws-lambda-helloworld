@@ -5,7 +5,7 @@ const http = axios.create({
 	timeout: 3000
 })
 
-export async function grab_api_price() {
+export async function grab_api_price(): Promise<string> {
 	return new Promise((async (resolve, reject) => {
 			await http.get('https://billcheap-prototype-thirdparty.herokuapp.com/grab/price')
 				.then((res) => {
@@ -19,7 +19,7 @@ export async function grab_api_price() {
 		}))
 }
 
-export async function gojek_api_price() {
+export async function gojek_api_price(): Promise<string> {
 		return new Promise((async (resolve, reject) => {
 			await http.get('https://billcheap-prototype-thirdparty.herokuapp.com/gojek/cost')
 				.then((res) => {
@@ -33,7 +33,7 @@ export async function gojek_api_price() {
 		}))
 }
 
-export async function tada_api_price() {
+export async function tada_api_price(): Promise<string> {
 	return new Promise((async (resolve, reject) => {
 		await http.get('https://billcheap-prototype-thirdparty.herokuapp.com/tada/price')
 			.then((res) => {
@@ -47,7 +47,7 @@ export async function tada_api_price() {
 	}))
 }
 
-export async function ryde_api_price() {
+export async function ryde_api_price(): Promise<string> {
 		return new Promise((async (resolve, reject) => {
 			await http.get('https://billcheap-prototype-thirdparty.herokuapp.com/ryde/pricing')
 				.then((res) => {

@@ -14,10 +14,10 @@ import * as API from './src/api'
 // export { checkPrice }
 
 module.exports.checkPrice = async (event: any, context: Context) => {
-	const prices = JSON.stringify(await API.all_prices())
+	const price = String(await API.ryde_api_price())
 	const response: APIGatewayProxyResult = {
 		statusCode: 200,
-		body: prices
+		body: price
 	}
 	return response
 }

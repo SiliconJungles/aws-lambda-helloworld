@@ -13,7 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.24",
-    "serverless-offline": "^4.9.4",
+		"serverless-offline": "^4.9.4",
+    "serverless-plugin-include-dependencies": "^3.2.1",
     "serverless-plugin-typescript": "^1.1.7",
     "tsc": "^1.20150623.0",
     "tslint": "^5.15.0",

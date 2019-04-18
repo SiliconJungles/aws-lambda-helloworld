@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: aws-nodejs # NOTE: update this with your service name
+service: aws-lambda-helloworld # NOTE: update this with your service name
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -20,6 +20,8 @@ service: aws-nodejs # NOTE: update this with your service name
 provider:
   name: aws
   runtime: nodejs8.10
+  stage: dev
+  region: ap-southeast-1
 
 # you can overwrite defaults here
 #  stage: dev
@@ -55,8 +57,8 @@ provider:
 #    - exclude-me-dir/**
 
 package:
-  exclude:
-    - node_modules/**/*
+  # only packages the files required for each lambda instead of entire project
+  individually: true
 
 functions:
   - main:
@@ -85,6 +87,7 @@ functions:
 
 plugins:
   - serverless-plugin-typescript
+  - serverless-plugin-include-dependencies
   - serverless-offline
 
 #    The following are a few example events you can configure

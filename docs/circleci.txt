@@ -1,2 +1,6 @@
 obtain access tokens from AWS console and set here:
 - https://circleci.com/gh/SiliconJungles/aws-lambda-helloworld/edit#aws
+
+setup account with specific permissions to deploy lambda
+- dunno
+- tried lambda deploy + cloud formation policies and got 'access denied'
